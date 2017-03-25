@@ -292,7 +292,7 @@ a:hover {text-decoration: none; color: white;}
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: url('https://dl.dropboxusercontent.com/u/836639/Tumblr/Pictures/empty.gif');
+    background-image: url('Pictures/empty.gif');
 }
 
 .clientBanner {
