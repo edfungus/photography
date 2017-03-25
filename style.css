@@ -20,7 +20,9 @@ html{
 	background: white;
 	font-family: Futura;
 	font-size: 12px;
-	padding: 17px
+	padding: 17px;
+    position: absolute;
+    overflow-x: hidden;
 }
 
 body{
@@ -60,7 +62,6 @@ a:hover {text-decoration: none; color: white;}
 }
 
 #Content{
-	<!---position: fixed;	--->
 	padding: 0px;
 	padding-bottom: 10px;
 	padding-left: 0px;
@@ -257,7 +258,6 @@ a:hover {text-decoration: none; color: white;}
 .image{
 	padding: 0px;
 	margin-left: 17px;
-	<!--- margin-left: 17px; --->
 }
 
 .nomargin {
