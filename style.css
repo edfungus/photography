@@ -85,6 +85,11 @@ a:hover {text-decoration: none; color: white;}
     position: relative;
 }
 
+#Filling {
+    white-space: nowrap;
+    padding: 0px;
+}
+
 #Epiloadpage{
     width: 300px;
     height: 580px;

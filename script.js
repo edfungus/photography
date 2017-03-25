@@ -1,8 +1,11 @@
 $(document).ready(function() {
     $('html').css('top', ($(window).height() - 500) / 3 - 35);
     $('#Content').css("width", window.innerWidth - 34);
+    load(document.URL);
+});
 
-    loadPictures(document.URL);
+function load(url) {
+    loadPictures(url);
 
     $(".titlePage").mouseenter(function() {
         $('.titlePageBg').animate({
@@ -34,7 +37,26 @@ $(document).ready(function() {
             }, 800);
         }
     });
-});
+    navigationOverride()
+}
+
+function navigationOverride() {
+    $('#beginning').click(function() {
+        event.preventDefault();        
+        $('#Content').animate({
+            scrollLeft: 0                        
+        }, 1000);   
+    });
+    $('a.hijackLink').click(function(event) {
+        if (window.location.hash == this.hash) {
+            $('#Content').animate({
+                scrollLeft: 0                        
+            }, 1000);                         
+        } else {
+            load(window.location.origin + "/" + this.hash);
+        }
+    });  
+}
 
 window.onresize = function(event) {
     $('#Content').css("width", window.innerWidth - 34);
@@ -45,20 +67,4 @@ $(window).mousewheel(function(event, delta) {
     event.preventDefault();
     var scroll = $('#Content').scrollLeft();
     $('#Content').scrollLeft(scroll - (delta * 80));
-});
-
-// I think this is to hijack the url path?
-$(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('#Content').animate({
-                    scrollLeft: 0 //target.offset().left                         
-                }, 1000);                         
-                return false;                       
-            }                     
-        }                   
-    });                 
 });
