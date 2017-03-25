@@ -4,10 +4,9 @@ loading.show();
 var htmlArr = [];
 var html = '';
 var route = url.split('/');
-console.log(route)
-if (route[3] == '' || route[4] == '') {
+if (route[4] == '') {
 html = html + "<img src=Pictures/IMG_0568-Edit.jpg height='600px' width='900px' class='image'/>";
-}else if (route[4] == 'people') {
+}else if (route[5] == 'people') {
 html = "<div class='titlePage'><div class='titlePageTitle'>people</div>"+
 "<div class='titlePageText'>girls boys bodies faces</div><div class='titlePageBg'></div></div>";
 html = html + "<img src=Pictures/people/g.jpg background-color='coral' height='600px' width='900px'class='image'/>";
@@ -44,11 +43,11 @@ html = html + "<img src=Pictures/people/a1.jpg background-color='coral' height='
 html = html + "<img src=Pictures/people/11169714_10152839119612781_2022892800613510981_o.jpg background-color='coral' height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/people/x.jpg background-color='coral' height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/people/a2.jpg background-color='coral' height='600px' width='400px'class='image'/>";
-} else if (route[4] == 'things') {
+} else if (route[5] == 'things') {
 html = "<div class='titlePage'><div class='titlePageTitle'>things</div>"+
 "<div class='titlePageText'>basically everything but people</div><div class='titlePageBg'></div></div>";
 html = html + "<img src=Pictures/things/a.jpg height='600px' width='900px'class='image'/>";
-} else if (route[4] == 'film') {
+} else if (route[5] == 'film') {
 html = "<div class='titlePage'><div class='titlePageTitle'>film</div>"+
 "<div class='titlePageText'>made with an olympus om-1 and light</div><div class='titlePageBg'></div></div>";
 html = html + "<img src=Pictures/film/g.jpg height='600px' width='888px'class='image'/>";
@@ -61,7 +60,7 @@ html = html + "<img src=Pictures/film/b.jpg height='600px' width='888px'class='i
 html = html + "<img src=Pictures/film/j.jpg height='600px' width='888px'class='image'/>";
 html = html + "<img src=Pictures/film/k.jpg height='600px' width='888px'class='image'/>";
 html = html + "<img src=Pictures/film/e.jpg height='600px' width='908px'class='image'/>";
-} else if (route[4] == 'clients') { if (route[5] == null) {
+} else if (route[5] == 'clients') { if (route[6] == null) {
 html = "<div class='titlePage'><div class='titlePageTitle'>clients</div>"+
 "<div class='titlePageText'>you are all amazing</div><div class='titlePageBg'></div></div>";
 html = html + "<div class='clientCard image'><a href='#/clients/UFG&Katherine' class='hijackLink'><span class='emptyBuffer'></span></a><div class='clientBanner'></div><div class='clientName'>UFG & Katherine</div><img src=Pictures/clients/b-UFG%20&%20Katherine.jpg height='600px' width='300'></div>"
@@ -75,7 +74,7 @@ html = html + "<div class='clientCard image'><a href='#/clients/SPARKSeniorDesig
 html = html + "<div class='clientCard image'><a href='#/clients/Nick' class='hijackLink'><span class='emptyBuffer'></span></a><div class='clientBanner'></div><div class='clientName'>Nick</div><img src=Pictures/clients/e-Nick.jpg height='600px' width='300'></div>"
 html = html + "<div class='clientCard image'><a href='#/clients/Spectrum2014FashionShow' class='hijackLink'><span class='emptyBuffer'></span></a><div class='clientBanner'></div><div class='clientName'>Spectrum 2014 Fashion Show</div><img src=Pictures/clients/c-Spectrum%202014%20Fashion%20Show.jpg height='600px' width='300'></div>"
 html = html + "<div class='clientCard image'><a href='#/clients/SPARKCouples' class='hijackLink'><span class='emptyBuffer'></span></a><div class='clientBanner'></div><div class='clientName'>SPARK Couples</div><img src=Pictures/clients/b-SPARK%20Couples.jpg height='600px' width='300'></div>"
-} else { if (route[5] == 'SPARKLexi') {
+} else { if (route[6] == 'SPARKLexi') {
 html = html + "<img src=Pictures/clients/SPARKLexi/IMG_4657.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKLexi/IMG_4769.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKLexi/01.jpg height='600px' width='400px'class='image'/>";
@@ -90,7 +89,7 @@ html = html + "<img src=Pictures/clients/SPARKLexi/11194559_10152861898837781_84
 html = html + "<img src=Pictures/clients/SPARKLexi/IMG_4712.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKLexi/IMG_4726.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKLexi/11164686_10152861898742781_1188131078018218103_o.jpg height='600px' width='400px'class='image'/>";
-} else if (route[5] == 'SPARKIxi') {
+} else if (route[6] == 'SPARKIxi') {
 html = html + "<img src=Pictures/clients/SPARKIxi/1941396_10152839109097781_6121549220310565565_o.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKIxi/a.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKIxi/a111.jpg height='600px' width='400px'class='image'/>";
@@ -110,12 +109,12 @@ html = html + "<img src=Pictures/clients/SPARKIxi/b.jpg height='600px' width='40
 html = html + "<img src=Pictures/clients/SPARKIxi/a1111.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKIxi/11036795_10152839110012781_5236488374916521699_o.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKIxi/11169714_10152839119612781_2022892800613510981_o.jpg height='600px' width='400px'class='image'/>";
-} else if (route[5] == 'SPARKSeniorDesign') {
+} else if (route[6] == 'SPARKSeniorDesign') {
 html = html + "<img src=Pictures/clients/SPARKSeniorDesign/11174324_10152861901762781_2237474410866436708_o.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKSeniorDesign/11174485_10152861901187781_5117171887077876172_o.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKSeniorDesign/11168580_10152861901607781_1292744547681920183_o.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKSeniorDesign/11174580_10152861900732781_958755750268497351_o.jpg height='600px' width='400px'class='image'/>";
-} else if (route[5] == 'Sarah') {
+} else if (route[6] == 'Sarah') {
 html = html + "<img src=Pictures/clients/Sarah/IMG_7291.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Sarah/IMG_7307-Edit.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/Sarah/IMG_7875.jpg height='600px' width='400px'class='image'/>";
@@ -138,14 +137,14 @@ html = html + "<img src=Pictures/clients/Sarah/IMG_7817.jpg height='600px' width
 html = html + "<img src=Pictures/clients/Sarah/IMG_7165-Edit.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/Sarah/IMG_7287.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/Sarah/IMG_7188-Edit.jpg height='600px' width='819px'class='image'/>";
-} else if (route[5] == 'Nick') {
+} else if (route[6] == 'Nick') {
 html = html + "<img src=Pictures/clients/Nick/f.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Nick/a.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/Nick/d.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Nick/c.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/Nick/b.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Nick/e.jpg height='600px' width='400px'class='image'/>";
-} else if (route[5] == 'UFG&EssentialOliver') {
+} else if (route[6] == 'UFG&EssentialOliver') {
 html = html + "<img src=Pictures/clients/UFG&EssentialOliver/g.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&EssentialOliver/f.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&EssentialOliver/a.jpg height='600px' width='800px'class='image'/>";
@@ -156,7 +155,7 @@ html = html + "<img src=Pictures/clients/UFG&EssentialOliver/c.jpg height='600px
 html = html + "<img src=Pictures/clients/UFG&EssentialOliver/b.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&EssentialOliver/j.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&EssentialOliver/e.jpg height='600px' width='400px'class='image'/>";
-} else if (route[5] == 'Contour2012FashionShow') {
+} else if (route[6] == 'Contour2012FashionShow') {
 html = html + "<img src=Pictures/clients/Contour2012FashionShow/g.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Contour2012FashionShow/f.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Contour2012FashionShow/a.jpg height='600px' width='400px'class='image'/>";
@@ -166,7 +165,7 @@ html = html + "<img src=Pictures/clients/Contour2012FashionShow/i.jpg height='60
 html = html + "<img src=Pictures/clients/Contour2012FashionShow/h.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Contour2012FashionShow/b.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Contour2012FashionShow/e.jpg height='600px' width='900px'class='image'/>";
-} else if (route[5] == 'UFG&Katherine') {
+} else if (route[6] == 'UFG&Katherine') {
 html = html + "<img src=Pictures/clients/UFG&Katherine/g.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&Katherine/f.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&Katherine/a.jpg height='600px' width='400px'class='image'/>";
@@ -183,7 +182,7 @@ html = html + "<img src=Pictures/clients/UFG&Katherine/b.jpg height='600px' widt
 html = html + "<img src=Pictures/clients/UFG&Katherine/j.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&Katherine/k.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/UFG&Katherine/e.jpg height='600px' width='400px'class='image'/>";
-} else if (route[5] == 'Spectrum2014FashionShow') {
+} else if (route[6] == 'Spectrum2014FashionShow') {
 html = html + "<img src=Pictures/clients/Spectrum2014FashionShow/g.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Spectrum2014FashionShow/f.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Spectrum2014FashionShow/a.jpg height='600px' width='900px'class='image'/>";
@@ -202,7 +201,7 @@ html = html + "<img src=Pictures/clients/Spectrum2014FashionShow/r.jpg height='6
 html = html + "<img src=Pictures/clients/Spectrum2014FashionShow/j.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Spectrum2014FashionShow/k.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/Spectrum2014FashionShow/e.jpg height='600px' width='400px'class='image'/>";
-} else if (route[5] == 'SPARKCouples') {
+} else if (route[6] == 'SPARKCouples') {
 html = html + "<img src=Pictures/clients/SPARKCouples/g.jpg height='600px' width='900px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKCouples/f.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKCouples/h (3).jpg height='600px' width='900px'class='image'/>";
@@ -216,7 +215,7 @@ html = html + "<img src=Pictures/clients/SPARKCouples/h (1).jpg height='600px' w
 html = html + "<img src=Pictures/clients/SPARKCouples/h (7).jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKCouples/b.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKCouples/e.jpg height='600px' width='900px'class='image'/>";
-} else if (route[5] == 'SPARKAlayna') {
+} else if (route[6] == 'SPARKAlayna') {
 html = html + "<img src=Pictures/clients/SPARKAlayna/g.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKAlayna/f.jpg height='600px' width='400px'class='image'/>";
 html = html + "<img src=Pictures/clients/SPARKAlayna/a.jpg height='600px' width='400px'class='image'/>";
@@ -227,10 +226,10 @@ html = html + "<img src=Pictures/clients/SPARKAlayna/b.jpg height='600px' width=
 html = html + "<img src=Pictures/clients/SPARKAlayna/e.jpg height='600px' width='900px'class='image'/>";
 } else { /*404 page*/
 html = "<div class='titlePage'><div class='titlePageTitle'>page not found</div>"+
-"<div class='titlePageText'>oops, nothing to see here<br><br><br><a href='/'>/home/</a></div><div class='titlePageBg'></div></div>";
+"<div class='titlePageText'>oops, nothing to see here<br><br><br><a href='/photography'>/home/</a></div><div class='titlePageBg'></div></div>";
 html = html + "<img src=Pictures/IMG_7287.jpg height='600px' width='900px' class='image'/>";
 }}
-} else if (route[4] == 'about') {
+} else if (route[5] == 'about') {
 html = "<div class='titlePage'><div class='titlePageTitle'>about</div>"+
 "<div class='titlePageText'>hi, how are you?</div><div class='titlePageBg'></div></div>"+
 "<img src=Pictures/IMG_9957.jpg height='600px' wdith='300px' class='image'/>"+
@@ -239,7 +238,7 @@ html = "<div class='titlePage'><div class='titlePageTitle'>about</div>"+
 "</div>";
 } else {
 html = "<div class='titlePage'><div class='titlePageTitle'>page not found</div>"+
-"<div class='titlePageText'>oops, nothing to see here<br><br><br><a href='/'>/home/</a></div><div class='titlePageBg'></div></div>";
+"<div class='titlePageText'>oops, nothing to see here<br><br><br><a href='/photography'>/home/</a></div><div class='titlePageBg'></div></div>";
 html = html + "<img src=Pictures/IMG_7287.jpg height='600px' width='900px' class='image'/>";
 }
 loading.hide();

@@ -53,7 +53,7 @@ function navigationOverride() {
                 scrollLeft: 0                        
             }, 1000);                         
         } else {
-            load(window.location.origin + "/" + this.hash);
+            load(window.location.origin + "/photography/" + this.hash);
         }
     });  
 }

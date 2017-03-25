@@ -14,7 +14,7 @@ def get404Page():
 	img = Image.open(errorPicture)
 	width, height = img.size
 	f.write("\nhtml = \"<div class='titlePage'><div class='titlePageTitle'>page not found</div>\"+"
-			"\n\"<div class='titlePageText'>oops, nothing to see here<br><br><br><a href='/'>/home/</a></div><div class='titlePageBg'></div></div>\";")
+			"\n\"<div class='titlePageText'>oops, nothing to see here<br><br><br><a href='/photography'>/home/</a></div><div class='titlePageBg'></div></div>\";")
 
 	f.write("\nhtml = html + \"<img src="+urlPath+"Pictures/"+errorPicture+" height='600px' width='")
 	f.write(str(width))
@@ -32,14 +32,14 @@ f.write("var loadPictures = function (url) {"
 homePageImage = 'IMG_0568-Edit.jpg'
 img = Image.open(homePageImage)
 width, height = img.size
-f.write("\nif (route[3] == '') {"
+f.write("\nif (route[4] == '') {"
 		"\nhtml = html + \"<img src="+urlPath+"Pictures/"+homePageImage+" height='600px' width='")
 f.write(str(width))
 f.write("px' class='image'/>\";")
 
 #### People
 
-f.write("\n}else if (route[4] == 'people') {"
+f.write("\n}else if (route[5] == 'people') {"
 		"\nhtml = \"<div class='titlePage'><div class='titlePageTitle'>people</div>\"+"
 		"\n\"<div class='titlePageText'>girls boys bodies faces</div><div class='titlePageBg'></div></div>\";")
 
@@ -54,7 +54,7 @@ for file in glob.glob("*.jpg"):
 
 #### Things
 
-f.write("\n} else if (route[4] == 'things') {"
+f.write("\n} else if (route[5] == 'things') {"
 		"\nhtml = \"<div class='titlePage'><div class='titlePageTitle'>things</div>\"+"
 		"\n\"<div class='titlePageText'>basically everything but people</div><div class='titlePageBg'></div></div>\";")
 
@@ -69,7 +69,7 @@ for file in glob.glob("*.jpg"):
 
 #### Film
 
-f.write("\n} else if (route[4] == 'film') {"
+f.write("\n} else if (route[5] == 'film') {"
 		"\nhtml = \"<div class='titlePage'><div class='titlePageTitle'>film</div>\"+"
 		"\n\"<div class='titlePageText'>made with an olympus om-1 and light</div><div class='titlePageBg'></div></div>\";")
 
@@ -84,7 +84,7 @@ for file in glob.glob("*.jpg"):
 
 #### Clients
 
-f.write("\n} else if (route[4] == 'clients') { if (route[5] == null) {"
+f.write("\n} else if (route[5] == 'clients') { if (route[6] == null) {"
 		"\nhtml = \"<div class='titlePage'><div class='titlePageTitle'>clients</div>\"+"
 		"\n\"<div class='titlePageText'>you are all amazing</div><div class='titlePageBg'></div></div>\";")
 
@@ -104,7 +104,7 @@ folders = os.listdir("./clients/")
 folders = [x for x in folders if "-" not in x]##folders[jpgCount:]			#### Array with all the names of the folders
 
 f.write("\n} else { ")
-f.write("if (route[5] == '"+folders[0]+"') {")
+f.write("if (route[6] == '"+folders[0]+"') {")
 os.chdir(starting_directory)
 os.chdir("./clients/"+folders[0])
 for file in glob.glob("*.jpg"):
@@ -115,7 +115,7 @@ for file in glob.glob("*.jpg"):
 	f.write("px'class='image'/>\";")
 
 for folderName in folders[1:]: 			#### Loop through the rest of the folders
-	f.write("\n} else if (route[5] == '"+folderName+"') {")
+	f.write("\n} else if (route[6] == '"+folderName+"') {")
 	os.chdir(starting_directory)
 	os.chdir("./clients/"+folderName)
 	for file in glob.glob("*.jpg"):
@@ -131,7 +131,7 @@ f.write("\n}}")
 
 #### About
 
-f.write("\n} else if (route[4] == 'about') {"
+f.write("\n} else if (route[5] == 'about') {"
 		"\nhtml = \"<div class='titlePage'><div class='titlePageTitle'>about</div>\"+"
 		"\n\"<div class='titlePageText'>hi, how are you?</div><div class='titlePageBg'></div></div>\"+"
 		"\n\"<img src="+urlPath+"Pictures/IMG_9957.jpg height='600px' wdith='300px' class='image'/>\"+"
